@@ -97,7 +97,7 @@ export default function Home() {
           <div className="mt-16 max-w-2xl enter delay-300">
             <p className="type-lead text-muted">
               <span className="nowrap">주식회사 웰빙이너스</span>는
-              <span className="text-foreground"> AI 기술과 약사의 전문성</span>을 결합해,
+              <span className="text-foreground"> AI 기술과 현장의 전문성</span>을 엮어,
               일상의 판단과 선택을 정돈합니다.
             </p>
             <p className="type-lead mt-5 text-muted">
@@ -189,8 +189,8 @@ export default function Home() {
                   몸 <span className="text-subtle font-sans text-sm tracking-[0.22em] uppercase">Body</span>
                 </h3>
                 <p className="mt-5 text-[15px] leading-[1.9] text-muted">
-                  약사의 시선으로 정리한 영양과 건강.
-                  무엇을, 왜, 얼마나 먹어야 하는지를 명확하게.
+                  전문가의 시선으로 정리한 영양과 건강.
+                  무엇을, 왜, 얼마나 필요한지를 명확하게.
                 </p>
                 <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
                   <p>— HArutine</p>
@@ -244,7 +244,7 @@ export default function Home() {
               <h2 className="mt-5 font-serif type-headline text-foreground">
                 우리는,
                 <br />
-                약국 뒤편의 대화에서 시작되었습니다.
+                매일의 작은 질문에서 시작되었습니다.
               </h2>
             </div>
           </Reveal>
@@ -255,10 +255,10 @@ export default function Home() {
               <div className="space-y-8 text-[16px] leading-[2] text-muted sm:text-[17px]">
                 <p>
                   <span className="nowrap">주식회사 웰빙이너스</span>의 시작은 거창한 기술이 아니라,
-                  약국에서 하루에도 수십 번씩 되풀이되는 한 문장이었습니다.
+                  현장에서 하루에도 수없이 되풀이되는 한 문장이었습니다.
                 </p>
                 <p className="font-serif text-xl italic leading-[1.6] text-foreground sm:text-2xl">
-                  &ldquo;어떤 걸 먹어야 할까요?&rdquo;
+                  &ldquo;어떤 걸 선택해야 할까요?&rdquo;
                 </p>
                 <p>
                   그 질문 뒤에는 언제나 <span className="text-foreground">몸의 이야기</span>가 있고,
@@ -267,7 +267,7 @@ export default function Home() {
                 </p>
                 <p>
                   우리는 AI 기술을 빌려 그 이야기들에 형태를 부여합니다.
-                  명리학과 데이터, 약학과 알고리즘, 문장의 구조와 감각 —
+                  오래된 지혜와 데이터, 전문 지식과 알고리즘, 문장의 구조와 감각 —
                   서로 다른 언어들을 하나의 도구로 이어내는 일을 합니다.
                 </p>
                 <p>
@@ -290,12 +290,12 @@ export default function Home() {
 
               <dl className="mt-14 space-y-10 sm:mt-16">
                 <div>
-                  <dt className="eyebrow">Founder</dt>
+                  <dt className="eyebrow">Established</dt>
                   <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
-                    하윤지
+                    2025
                   </dd>
                   <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
-                    약사 · 대표이사
+                    AI · 헬스케어 · 콘텐츠
                   </dd>
                 </div>
                 <div>
@@ -310,10 +310,10 @@ export default function Home() {
                 <div>
                   <dt className="eyebrow">Focus</dt>
                   <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
-                    AI · Pharmacy · Daily Life
+                    Care × Technology
                   </dd>
                   <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
-                    약사의 전문성과 AI 기술을
+                    현장의 전문성과 AI 기술을
                     <br />
                     일상의 도구로 엮어내는 일
                   </dd>
