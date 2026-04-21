@@ -28,7 +28,7 @@ Vercel 자동 배포 (main 브랜치).
 - [운세한입](https://unsehanip.vercel.app) · AI 사주/운세
 - [AI 블로그 작성기](https://ai-blog-writer-eosin.vercel.app) · 블로그 자동 작성
 - [노무사 계산기](https://labor-calc.vercel.app) · 퇴직금/연차/4대보험
-- 하루틴 · AI 약사 영양제 큐레이션
+- [HArutine](https://harutine.net/) · AI 약사 영양제 큐레이션
 - 상권분석 · 준비 중
 - TradeUp · 준비 중
 

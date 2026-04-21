@@ -14,16 +14,16 @@ const SERVICES: Service[] = [
     name: "운세한입",
     tagline: "AI 사주 · 운세 · 궁합",
     description:
-      "사주·대운·궁합·혈액형·연간운세까지, AI가 풀어드리는 오늘의 운세.",
+      "사주·대운·궁합·혈액형·연간운세까지, 방대한 명리 데이터를 AI가 풀어냅니다.",
     url: "https://unsehanip.vercel.app",
     status: "live",
     category: "라이프스타일",
   },
   {
     name: "AI 블로그 작성기",
-    tagline: "블로그 글쓰기, AI에게 맡기세요",
+    tagline: "전문가 수준의 콘텐츠 자동화",
     description:
-      "주제만 입력하면 AI가 SEO 최적화된 블로그 글을 완성해드립니다.",
+      "주제만 입력하면 SEO 최적화된 블로그 글을 구성·작성·다듬어 완성해 드립니다.",
     url: "https://ai-blog-writer-eosin.vercel.app",
     status: "live",
     category: "생산성",
@@ -32,25 +32,34 @@ const SERVICES: Service[] = [
     name: "노무사 계산기",
     tagline: "퇴직금 · 연차 · 4대보험",
     description:
-      "퇴직금·실수령액·연차·4대보험·주휴수당·연장야간휴일 6종 무료 계산.",
+      "정식 산식 기반 퇴직금·실수령액·연차·4대보험·주휴수당·연장야간휴일 6종 계산.",
     url: "https://labor-calc.vercel.app",
     status: "live",
     category: "업무 도구",
   },
   {
-    name: "하루틴",
+    name: "HArutine",
     tagline: "AI 약사의 영양제 큐레이션",
     description:
-      "증상·목적을 입력하면 AI 약사가 나에게 꼭 맞는 영양제를 추천해드립니다.",
-    url: "https://harutine.vercel.app",
+      "증상·목적·복용 이력을 분석해 나에게 꼭 맞는 영양제를 약사의 시선으로 추천합니다.",
+    url: "https://harutine.net/",
     status: "live",
     category: "헬스케어",
+  },
+  {
+    name: "웰빙이너스 스토어",
+    tagline: "약사가 고른 건강기능식품",
+    description:
+      "HArutine의 데이터와 약사의 전문성을 바탕으로 큐레이션한 건강기능식품을 만나보세요.",
+    url: null,
+    status: "soon",
+    category: "커머스",
   },
   {
     name: "상권분석",
     tagline: "데이터 기반 상권 리포트",
     description:
-      "행정동별 유동인구·업종·배달 비중까지, AI가 정리한 상권 인사이트.",
+      "행정동 단위 유동인구·업종 분포·배달 비중까지, AI가 정리한 상권 인사이트.",
     url: null,
     status: "soon",
     category: "비즈니스",
@@ -59,159 +68,298 @@ const SERVICES: Service[] = [
     name: "TradeUp",
     tagline: "부동산 교환 매칭 플랫폼",
     description:
-      "1:1 교환부터 삼각 교환까지, 원하는 부동산으로 업그레이드하세요.",
+      "1:1 교환에서 삼각 교환까지, 더 원하는 부동산으로 이동하는 새로운 방법.",
     url: null,
     status: "soon",
     category: "부동산",
   },
 ];
 
+const PILLARS = [
+  {
+    kicker: "AI",
+    title: "기술",
+    body: "복잡한 계산과 반복 작업을 AI에게 맡기고, 사람은 더 중요한 일에 집중합니다.",
+  },
+  {
+    kicker: "Pharmacist",
+    title: "전문성",
+    body: "약사의 시선에서 검증한 정보와 제품만을, 책임지고 전달합니다.",
+  },
+  {
+    kicker: "Daily",
+    title: "일상",
+    body: "매일의 루틴에 자연스럽게 녹아드는 가벼움이, 진짜 웰빙의 시작입니다.",
+  },
+];
+
 export default function Home() {
+  const year = new Date().getFullYear();
+
   return (
     <div className="min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <Link href="/" className="text-lg font-semibold tracking-tight">
-            웰빙이너스
+      {/* ── Header ─────────────────────────── */}
+      <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 sm:py-5">
+          <Link href="/" className="flex items-baseline gap-3">
+            <span className="font-serif text-[1.125rem] tracking-tight text-foreground sm:text-xl">
+              웰빙이너스
+            </span>
+            <span className="hidden text-[10px] font-medium tracking-[0.22em] text-subtle md:inline">
+              WELLBEING · IN · US
+            </span>
           </Link>
-          <nav className="flex items-center gap-6 text-sm text-muted">
-            <a href="#services" className="hover:text-foreground transition-colors">
-              서비스
+          <nav className="flex items-center gap-5 text-[13px] font-medium text-muted sm:gap-8 sm:text-sm">
+            <a href="#services" className="link-underline hover:text-foreground transition-colors">
+              Services
             </a>
-            <a href="#about" className="hover:text-foreground transition-colors">
-              소개
+            <a href="#philosophy" className="link-underline hover:text-foreground transition-colors">
+              About
             </a>
-            <a href="#contact" className="hover:text-foreground transition-colors">
-              문의
+            <a href="#contact" className="link-underline hover:text-foreground transition-colors">
+              Contact
             </a>
           </nav>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
-        <div className="max-w-3xl">
-          <p className="mb-4 text-sm font-medium tracking-wider text-subtle uppercase">
-            Wellbeing · In · Us
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl leading-tight">
-            웰빙, 우리 안에서
+      {/* ── Hero ──────────────────────────── */}
+      <section className="relative overflow-hidden border-b border-border">
+        <div className="mx-auto max-w-7xl px-5 pt-16 pb-20 sm:px-8 sm:pt-28 sm:pb-32 lg:pt-36 lg:pb-40">
+          {/* Top meta row */}
+          <div className="mb-12 flex items-center gap-4 reveal-in">
+            <span className="draw-line h-px w-12 bg-border-strong sm:w-16" />
+            <p className="eyebrow">Established 2025 · Seoul & Wonju</p>
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-serif type-display text-foreground reveal-up delay-100">
+            웰빙은,
             <br />
-            시작됩니다.
+            우리 안에서
+            <span className="inline-block text-gold"> 시작</span>됩니다.
           </h1>
-          <p className="mt-6 text-lg text-muted sm:text-xl">
+
+          {/* English subhead in italic serif */}
+          <p className="mt-7 font-serif-light text-xl italic text-muted sm:mt-8 sm:text-2xl lg:text-[1.75rem] reveal-up delay-200">
             Wellness, built into your day.
           </p>
-          <p className="mt-8 max-w-2xl text-base text-muted leading-relaxed">
-            주식회사 웰빙이너스는 AI 기술로 일상 속 번거로움을 덜어드립니다.
-            계산·상담·창작·헬스케어까지, 더 가벼운 하루를 위한 도구들을 만듭니다.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+
+          {/* Body paragraph — editorial feel */}
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-12 lg:gap-16 reveal-up delay-300">
+            <div className="lg:col-span-5">
+              <p className="eyebrow mb-4">Manifesto — 2025</p>
+              <p className="font-serif text-xl leading-[1.5] text-foreground-soft sm:text-2xl">
+                복잡함은 기술에게,
+                <br />
+                가벼움은 당신에게.
+              </p>
+            </div>
+            <div className="border-l-2 border-border-strong pl-6 type-lead text-muted lg:col-span-7">
+              <p>
+                주식회사 웰빙이너스는 <span className="text-foreground">AI 기술과 약사의 전문성</span>을
+                결합해, 일상의 판단과 선택을 정돈합니다. 계산·상담·창작·헬스케어 —
+                분야는 다르지만, 모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-14 flex flex-wrap items-center gap-3 reveal-up delay-400 sm:mt-16">
             <a
               href="#services"
-              className="inline-flex items-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-background hover:bg-foreground/90 transition-colors"
+              className="group inline-flex items-center rounded-none bg-accent px-7 py-4 text-[13px] font-medium tracking-[0.1em] uppercase text-background transition-all hover:bg-accent-hover hover:px-9"
             >
-              서비스 둘러보기
+              Explore Services
+              <span className="ml-3 transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#about"
-              className="inline-flex items-center rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground hover:bg-card-bg transition-colors"
+              href="#philosophy"
+              className="inline-flex items-center rounded-none border border-border-strong px-7 py-4 text-[13px] font-medium tracking-[0.1em] uppercase text-foreground transition-all hover:bg-surface"
             >
-              법인 소개
+              About the Company
             </a>
           </div>
         </div>
+
+        {/* Large decorative numeral */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-8 -right-8 select-none font-serif text-[14rem] leading-none text-border sm:-bottom-16 sm:-right-10 sm:text-[20rem] lg:text-[26rem]"
+        >
+          2025
+        </div>
       </section>
 
-      {/* Services */}
-      <section id="services" className="border-t border-border bg-card-bg">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <div className="mb-12 max-w-2xl">
-            <p className="mb-3 text-sm font-medium tracking-wider text-subtle uppercase">
-              Our Services
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              일상과 업무를 더 가볍게
-            </h2>
-            <p className="mt-4 text-muted">
-              현재 제공 중인 서비스와 곧 만나보실 서비스입니다.
+      {/* ── Pillars (3-column editorial) ───── */}
+      <section className="border-b border-border bg-background-alt">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-5 sm:px-8 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
+          {PILLARS.map((p, i) => (
+            <div key={p.title} className="px-0 py-14 lg:px-10 lg:py-20">
+              <div className="mb-6 flex items-center gap-3">
+                <span className="section-number text-sm">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="eyebrow">{p.kicker}</p>
+              </div>
+              <h3 className="font-serif text-3xl text-foreground sm:text-4xl">
+                {p.title}
+              </h3>
+              <p className="mt-5 text-[15px] leading-[1.9] text-muted">{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Services ───────────────────────── */}
+      <section id="services" className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:py-36">
+          <div className="mb-14 flex flex-col gap-6 sm:mb-20 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <div className="mb-6 flex items-center gap-4">
+                <span className="section-number text-sm">01</span>
+                <span className="h-px w-12 bg-border-strong" />
+                <p className="eyebrow">Our Services</p>
+              </div>
+              <h2 className="font-serif type-headline text-foreground">
+                일상과 업무를,
+                <br className="sm:hidden" />
+                <span className="sm:ml-3">더 정돈되게.</span>
+              </h2>
+            </div>
+            <p className="max-w-sm text-[15px] leading-[1.8] text-muted sm:text-right">
+              현재 운영 중인 네 가지 서비스와 곧 공개될 세 가지 프로젝트.
+              각각은 독립적이되, 서로를 보완하도록 설계됩니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {SERVICES.map((service) => (
-              <ServiceCard key={service.name} service={service} />
+          <div className="grid grid-cols-1 border-t border-l border-border bg-surface sm:grid-cols-2 lg:grid-cols-3">
+            {SERVICES.map((service, idx) => (
+              <ServiceCard key={service.name} service={service} index={idx} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="border-t border-border">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <div className="max-w-3xl">
-            <p className="mb-3 text-sm font-medium tracking-wider text-subtle uppercase">
-              About
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              기술로 만드는 <br className="sm:hidden" />
-              가벼운 일상
-            </h2>
-            <div className="mt-8 space-y-6 text-base text-muted leading-relaxed">
-              <p>
+      {/* ── About / Philosophy ─────────────── */}
+      <section id="philosophy" className="border-b border-border bg-background-alt">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:py-36">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-5">
+              <div className="mb-6 flex items-center gap-4">
+                <span className="section-number text-sm">02</span>
+                <span className="h-px w-12 bg-border-strong" />
+                <p className="eyebrow">Philosophy</p>
+              </div>
+              <h2 className="font-serif type-headline text-foreground">
+                기술로 만드는
+                <br />
+                가벼운 일상.
+              </h2>
+              <div className="mt-12 inline-block border-l-2 border-foreground pl-5">
+                <p className="font-serif text-lg italic leading-[1.65] text-foreground-soft sm:text-xl">
+                  웰빙은 어딘가 멀리 있는 것이 아니라,
+                  <br />
+                  우리 안에서 시작됩니다.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-8 text-[16px] leading-[1.95] text-muted lg:col-span-7 sm:text-[17px]">
+              <p className="drop-cap">
                 주식회사 웰빙이너스는 AI 기술을 일상의 문제 해결에 접목하는
-                회사입니다. 복잡한 계산과 반복되는 작업은 AI에게 맡기고,
-                사람은 더 중요한 일에 집중할 수 있도록 돕습니다.
+                회사입니다. 복잡한 계산과 반복되는 작업은 AI에게, 판단과 감성은
+                사람에게. 이 단순한 원칙이 우리가 만드는 모든 서비스의 출발점입니다.
               </p>
               <p>
-                운세 상담부터 블로그 글쓰기, 세무·노무 계산, 영양제 큐레이션까지 —
-                서로 다른 영역이지만 모두 &ldquo;<strong className="text-foreground">더 나은 하루를 만든다</strong>&rdquo;는
-                한 가지 방향을 공유합니다.
+                운세 상담, 블로그 글쓰기, 세무·노무 계산, 영양제 큐레이션, 그리고
+                약사가 직접 선별한 건강기능식품까지 — 서로 다른 영역이지만 모두
+                &ldquo;<span className="text-foreground font-medium">더 나은 하루</span>&rdquo;
+                라는 한 가지 방향을 공유합니다.
               </p>
               <p>
-                웰빙이너스(Wellbeing in Us). 웰빙은 어딘가 멀리 있는 것이 아니라
-                우리 안에서 시작된다는 믿음으로, 오늘도 작은 도구들을 만들어갑니다.
+                각 서비스는 독립적으로 기능하되, 결국 한 사람의 하루를 더 가볍게
+                만드는 데 기여합니다. 우리는 그 믿음을 따라 오늘도 작지만
+                단단한 도구들을, 그리고 검증된 제품들을 만들어 갑니다.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contact" className="border-t border-border bg-card-bg">
-        <div className="mx-auto max-w-6xl px-6 py-12">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
-            <div>
-              <h3 className="text-base font-semibold">주식회사 웰빙이너스</h3>
-              <p className="mt-2 text-sm text-muted">
+      {/* ── Footer / Contact ───────────────── */}
+      <footer id="contact" className="bg-dark-bg text-dark-fg">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:py-36">
+          <div className="mb-14 flex items-center gap-4 sm:mb-20">
+            <span className="section-number text-sm text-dark-muted">03</span>
+            <span className="h-px w-12 bg-dark-border" />
+            <p className="eyebrow text-dark-muted">Contact</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            {/* Left: brand */}
+            <div className="lg:col-span-5">
+              <h3 className="font-serif text-3xl leading-[1.2] text-dark-fg sm:text-4xl lg:text-5xl">
+                주식회사
+                <br />
+                웰빙이너스
+              </h3>
+              <p className="mt-6 font-serif-light text-base italic text-dark-muted sm:text-lg">
                 Wellness, built into your day.
               </p>
-              <a
-                href="mailto:wellbeinginus@gmail.com"
-                className="mt-4 inline-block text-sm text-link hover:underline"
-              >
-                wellbeinginus@gmail.com
-              </a>
+
+              <div className="mt-12">
+                <p className="text-[10px] font-semibold tracking-[0.22em] text-dark-muted uppercase">
+                  General Inquiry
+                </p>
+                <a
+                  href="mailto:wellbeinginus@gmail.com"
+                  className="link-underline mt-3 inline-block text-lg text-dark-fg sm:text-xl"
+                >
+                  wellbeinginus@gmail.com
+                </a>
+              </div>
             </div>
-            <div className="text-sm text-muted space-y-1">
-              <p>
-                <span className="inline-block w-24 text-subtle">대표자</span>
-                하윤지
+
+            {/* Right: corporate info */}
+            <div className="lg:col-span-7">
+              <p className="text-[10px] font-semibold tracking-[0.22em] text-dark-muted uppercase">
+                Corporate Information
               </p>
-              <p>
-                <span className="inline-block w-24 text-subtle">사업자등록번호</span>
-                570-86-03233
-              </p>
-              <p className="flex">
-                <span className="inline-block w-24 shrink-0 text-subtle">주소</span>
-                <span>강원특별자치도 원주시 오성마을길 63-25, 201-p378</span>
-              </p>
+              <dl className="mt-6 divide-y divide-dark-border border-t border-b border-dark-border">
+                <div className="grid grid-cols-[110px_1fr] items-start gap-4 py-5 sm:grid-cols-[180px_1fr] sm:gap-8">
+                  <dt className="text-[13px] text-dark-muted tracking-wide">
+                    대표자
+                  </dt>
+                  <dd className="text-[15px] text-dark-fg sm:text-base">하윤지</dd>
+                </div>
+                <div className="grid grid-cols-[110px_1fr] items-start gap-4 py-5 sm:grid-cols-[180px_1fr] sm:gap-8">
+                  <dt className="text-[13px] text-dark-muted tracking-wide">
+                    사업자등록번호
+                  </dt>
+                  <dd className="text-[15px] tabular-nums text-dark-fg sm:text-base">
+                    570-86-03233
+                  </dd>
+                </div>
+                <div className="grid grid-cols-[110px_1fr] items-start gap-4 py-5 sm:grid-cols-[180px_1fr] sm:gap-8">
+                  <dt className="text-[13px] text-dark-muted tracking-wide">
+                    주소
+                  </dt>
+                  <dd className="text-[15px] leading-[1.75] text-dark-fg sm:text-base">
+                    강원특별자치도 원주시
+                    <br />
+                    오성마을길 63-25, 201-p378
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
 
-          <div className="mt-10 border-t border-border pt-6 text-center text-xs text-subtle">
-            &copy; {new Date().getFullYear()} 주식회사 웰빙이너스. All rights reserved.
+          <div className="mt-20 flex flex-col items-start gap-4 border-t border-dark-border pt-10 text-xs text-dark-muted sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+            <p className="leading-relaxed">
+              &copy; {year} 주식회사 웰빙이너스. All rights reserved.
+            </p>
+            <p className="tracking-[0.22em]">WELLBEINGIN.US</p>
           </div>
         </div>
       </footer>
@@ -219,60 +367,52 @@ export default function Home() {
   );
 }
 
-function ServiceCard({ service }: { service: Service }) {
+function ServiceCard({ service, index }: { service: Service; index: number }) {
   const isLive = service.status === "live";
+  const number = String(index + 1).padStart(2, "0");
+
   const content = (
-    <div
-      className={`group relative flex h-full flex-col rounded-xl border border-border bg-background p-6 transition-all ${
-        isLive
-          ? "hover:border-foreground/30 hover:shadow-sm"
-          : "opacity-70"
+    <article
+      className={`group relative flex h-full flex-col border-r border-b border-border bg-surface p-7 transition-all duration-500 sm:p-8 lg:p-10 ${
+        isLive ? "hover:bg-background-alt" : "opacity-70"
       }`}
     >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-xs font-medium tracking-wider text-subtle uppercase">
-            {service.category}
-          </p>
-          <h3 className="mt-1 text-lg font-semibold tracking-tight">
-            {service.name}
-          </h3>
-        </div>
+      <div className="mb-8 flex items-start justify-between gap-3">
+        <span className="section-number text-sm">{number}</span>
         <span
-          className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${
+          className={`shrink-0 px-2.5 py-1 text-[10px] font-medium tracking-[0.15em] uppercase ${
             isLive
               ? "bg-foreground text-background"
-              : "border border-border text-subtle"
+              : "border border-border-strong text-subtle"
           }`}
         >
-          {isLive ? "서비스 중" : "Coming Soon"}
+          {isLive ? "Live" : "Coming Soon"}
         </span>
       </div>
-      <p className="mt-3 text-sm font-medium text-foreground">
+
+      <p className="eyebrow mb-3">{service.category}</p>
+      <h3 className="font-serif text-2xl leading-tight text-foreground sm:text-[1.6rem]">
+        {service.name}
+      </h3>
+      <p className="mt-3 text-[15px] font-medium text-foreground-soft">
         {service.tagline}
       </p>
-      <p className="mt-2 text-sm text-muted leading-relaxed flex-1">
+      <p className="mt-4 flex-1 text-[14px] leading-[1.85] text-muted">
         {service.description}
       </p>
+
       {isLive && (
-        <div className="mt-5 flex items-center text-sm font-medium text-foreground">
-          바로가기
-          <svg
-            className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
-          </svg>
+        <div className="mt-10 flex items-center gap-3 text-[13px] font-medium text-foreground">
+          <span className="tracking-[0.18em] uppercase">Visit</span>
+          <span className="relative h-px w-8 overflow-hidden bg-border-strong">
+            <span className="absolute inset-0 origin-left scale-x-0 bg-foreground transition-transform duration-500 group-hover:scale-x-100" />
+          </span>
+          <span className="transition-transform duration-500 group-hover:translate-x-1">
+            →
+          </span>
         </div>
       )}
-    </div>
+    </article>
   );
 
   if (isLive && service.url) {
