@@ -74,6 +74,14 @@ h1, h2, h3, h4, h5, h6, p, blockquote, li, dt, dd {
   white-space: nowrap;
 }
 
+/* Muted photo treatment — desaturate + warm tint for brand cohesion */
+.photo-muted {
+  filter: saturate(0.72) contrast(0.96) brightness(0.98);
+}
+.photo-muted-soft {
+  filter: saturate(0.82) contrast(0.98);
+}
+
 .font-serif {
   font-family: var(--font-serif);
   font-weight: 600;

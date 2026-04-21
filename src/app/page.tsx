@@ -78,83 +78,76 @@ export default function Home() {
       </header>
 
       {/* ── Hero ──────────────────────────── */}
-      <section className="border-b border-border">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-0 px-0 pt-20 pb-0 lg:grid-cols-12 lg:gap-0 lg:pt-0 lg:pb-0">
-          {/* Text column */}
-          <div className="order-2 px-5 pb-20 sm:px-8 sm:pb-32 lg:order-1 lg:col-span-7 lg:pl-8 lg:pr-12 lg:pt-44 lg:pb-44 xl:pl-20">
-            <p className="eyebrow enter">Established 2025</p>
+      <section className="relative overflow-hidden border-b border-border">
+        {/* Background image (subtle, integrated) */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=2400&q=80&auto=format&fit=crop"
+            alt=""
+            className="photo-muted absolute inset-0 h-full w-full object-cover opacity-[0.38]"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/55 to-background/85" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/35 to-background/10" />
+        </div>
 
-            <h1 className="mt-10 font-serif type-display text-foreground enter delay-100">
-              웰빙은, 우리 안에서
-              <br />
-              <span className="text-brand">시작</span>됩니다.
-            </h1>
+        <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28 lg:py-32">
+          <p className="eyebrow enter">Established 2025</p>
 
-            <p className="mt-8 font-serif-light text-xl italic text-muted sm:text-[1.625rem] enter delay-200">
-              Wellness, built into your day.
+          <h1 className="mt-8 font-serif type-display text-foreground enter delay-100">
+            웰빙은, 우리 안에서
+            <br />
+            <span className="text-brand">시작</span>됩니다.
+          </h1>
+
+          <p className="mt-6 font-serif-light text-xl italic text-muted sm:text-[1.625rem] enter delay-200">
+            Wellness, built into your day.
+          </p>
+
+          <div className="mt-10 max-w-2xl enter delay-300">
+            <p className="type-lead text-muted">
+              <span className="nowrap">주식회사 웰빙이너스</span>는
+              <span className="text-foreground"> AI 기술과 현장의 전문성</span>을 엮어,
+              일상의 판단과 선택을 정돈합니다.
             </p>
-
-            <div className="mt-14 max-w-xl enter delay-300">
-              <p className="type-lead text-muted">
-                <span className="nowrap">주식회사 웰빙이너스</span>는
-                <span className="text-foreground"> AI 기술과 현장의 전문성</span>을 엮어,
-                일상의 판단과 선택을 정돈합니다.
-              </p>
-              <p className="type-lead mt-5 text-muted">
-                상담·창작·헬스케어 — 분야는 다르지만,
-                모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
-              </p>
-            </div>
-
-            <div className="mt-12 flex flex-wrap items-center gap-3 enter delay-400">
-              <Magnetic strength={0.2}>
-                <a
-                  href="#services"
-                  data-cursor="hover"
-                  className="group inline-flex items-center bg-accent px-7 py-4 text-[12px] font-medium tracking-[0.16em] uppercase text-background transition-colors hover:bg-accent-hover"
-                >
-                  Explore Services
-                  <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </a>
-              </Magnetic>
-              <Magnetic strength={0.2}>
-                <a
-                  href="#about"
-                  data-cursor="hover"
-                  className="inline-flex items-center border border-border-strong px-7 py-4 text-[12px] font-medium tracking-[0.16em] uppercase text-foreground transition-colors hover:bg-surface"
-                >
-                  About the Company
-                </a>
-              </Magnetic>
-            </div>
+            <p className="type-lead mt-4 text-muted">
+              상담·창작·헬스케어 — 분야는 다르지만,
+              모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
+            </p>
           </div>
 
-          {/* Image column */}
-          <div className="relative order-1 aspect-[4/3] overflow-hidden bg-brand-wash sm:aspect-[16/9] lg:order-2 lg:col-span-5 lg:aspect-auto lg:min-h-[560px]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&q=80&auto=format&fit=crop"
-              alt="자연의 부드러운 빛과 녹음"
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand/20 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 text-dark-fg sm:bottom-8 sm:left-8 sm:right-8">
-              <p className="font-serif text-xl italic leading-[1.4] drop-shadow-sm sm:text-2xl">
-                &ldquo;가볍게, 그러나 단단하게.&rdquo;
-              </p>
-            </div>
+          <div className="mt-10 flex flex-wrap items-center gap-3 enter delay-400">
+            <Magnetic strength={0.2}>
+              <a
+                href="#services"
+                data-cursor="hover"
+                className="group inline-flex items-center bg-accent px-7 py-4 text-[12px] font-medium tracking-[0.16em] uppercase text-background transition-colors hover:bg-accent-hover"
+              >
+                Explore Services
+                <span className="ml-3 transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </a>
+            </Magnetic>
+            <Magnetic strength={0.2}>
+              <a
+                href="#about"
+                data-cursor="hover"
+                className="inline-flex items-center border border-border-strong px-7 py-4 text-[12px] font-medium tracking-[0.16em] uppercase text-foreground transition-colors hover:bg-surface"
+              >
+                About the Company
+              </a>
+            </Magnetic>
           </div>
         </div>
       </section>
 
       {/* ── Services ───────────────────────── */}
       <section id="services" className="border-b border-border bg-background-alt">
-        <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
+        <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
           <Reveal>
-            <div className="mb-16 flex flex-col gap-8 sm:mb-20 sm:flex-row sm:items-end sm:justify-between">
+            <div className="mb-10 flex flex-col gap-6 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
               <div className="max-w-xl">
                 <p className="eyebrow">Services</p>
                 <h2 className="mt-4 font-serif type-headline text-foreground">
@@ -181,36 +174,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Editorial image break ──────────── */}
-      <section
-        className="relative overflow-hidden border-b border-border"
-        aria-hidden
-      >
-        <div className="relative aspect-[21/9] w-full sm:aspect-[24/9] lg:aspect-[30/9]">
+      {/* ── Ecosystem / How They Connect ───── */}
+      <section className="relative overflow-hidden border-b border-border bg-background">
+        {/* Subtle background image */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=2400&q=80&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2400&q=80&auto=format&fit=crop"
             alt=""
-            className="absolute inset-0 h-full w-full object-cover"
+            className="photo-muted absolute inset-0 h-full w-full object-cover opacity-[0.28]"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-transparent to-background/40" />
-          <div className="absolute inset-0 flex items-center justify-center px-6 text-center">
-            <div className="max-w-3xl">
-              <p className="eyebrow text-dark-fg/90 drop-shadow-md">Our Practice</p>
-              <p className="mt-5 font-serif text-2xl leading-[1.4] text-dark-fg drop-shadow sm:text-3xl lg:text-4xl">
-                &ldquo;화려함보다 단단함을,
-                <br />
-                새로움보다 쓸모를.&rdquo;
-              </p>
-            </div>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/85" />
         </div>
-      </section>
 
-      {/* ── Ecosystem / How They Connect ───── */}
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
+        <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
           <Reveal className="mx-auto max-w-3xl text-center">
             <p className="eyebrow">The Framework</p>
             <h2 className="mt-4 font-serif type-headline text-foreground">
@@ -218,14 +196,14 @@ export default function Home() {
               <br />
               세 가지 차원으로.
             </h2>
-            <p className="mx-auto mt-8 max-w-xl type-lead text-muted">
+            <p className="mx-auto mt-6 max-w-xl type-lead text-muted">
               서로 달라 보이는 네 개의 서비스는,
               결국 한 사람의 하루를 구성하는 세 축을 따라 자리잡습니다.
             </p>
           </Reveal>
 
           <Reveal delay={150}>
-            <div className="mt-20 grid grid-cols-1 gap-10 sm:mt-24 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-border-strong">
+            <div className="mt-12 grid grid-cols-1 gap-8 sm:mt-16 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-border-strong">
               <div className="px-0 sm:px-8 lg:px-12">
                 <p className="font-serif text-4xl italic text-brand sm:text-5xl">
                   I.
@@ -280,11 +258,26 @@ export default function Home() {
       </section>
 
       {/* ── About ──────────────────────────── */}
-      <section id="about" className="border-b border-border bg-background-alt">
-        <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32 lg:py-44">
+      <section
+        id="about"
+        className="relative overflow-hidden border-b border-border bg-background-alt"
+      >
+        {/* Subtle background image */}
+        <div className="pointer-events-none absolute inset-0" aria-hidden>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=2000&q=80&auto=format&fit=crop"
+            alt=""
+            className="photo-muted absolute right-0 top-0 h-full w-full object-cover opacity-[0.3] md:w-2/3"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background-alt via-background-alt/85 to-background-alt/50" />
+        </div>
+
+        <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
           {/* Header */}
           <Reveal>
-            <div className="mb-16 sm:mb-24">
+            <div className="mb-10 sm:mb-14">
               <p className="eyebrow">About · Company</p>
               <h2 className="mt-5 font-serif type-headline text-foreground">
                 우리는,
@@ -295,7 +288,7 @@ export default function Home() {
           </Reveal>
 
           {/* Body: two-column editorial */}
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <Reveal delay={100} className="lg:col-span-7">
               <div className="space-y-8 text-[16px] leading-[2] text-muted sm:text-[17px]">
                 <p>
@@ -325,17 +318,6 @@ export default function Home() {
 
             {/* Side panel */}
             <Reveal delay={200} className="lg:col-span-5">
-              {/* Accent image */}
-              <div className="relative mb-10 aspect-[4/5] overflow-hidden bg-brand-wash">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800&q=80&auto=format&fit=crop"
-                  alt="차분한 아침의 찻잔과 허브"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-
               <div className="border-t border-border-strong pt-10">
                 <p className="eyebrow">Our Principle</p>
                 <blockquote className="mt-6 font-serif text-2xl leading-[1.55] text-foreground sm:text-[1.75rem]">
