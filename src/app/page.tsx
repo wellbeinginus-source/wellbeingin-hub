@@ -83,13 +83,15 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=2400&q=80&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=2400&q=80&auto=format&fit=crop"
             alt=""
-            className="photo-muted absolute inset-0 h-full w-full object-cover opacity-[0.38]"
+            className="photo-muted absolute inset-0 h-full w-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/55 to-background/85" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/35 to-background/10" />
+          {/* Horizontal fade: solid background on left (text area) → reveal image on right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/20 lg:via-background/70 lg:to-background/10" />
+          {/* Soft vertical fade at top/bottom for smooth section edges */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background/30" />
         </div>
 
         <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28 lg:py-32">
@@ -180,12 +182,12 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2400&q=80&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=2400&q=80&auto=format&fit=crop"
             alt=""
-            className="photo-muted absolute inset-0 h-full w-full object-cover opacity-[0.28]"
+            className="photo-muted absolute inset-0 h-full w-full object-cover opacity-[0.55]"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/70" />
         </div>
 
         <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
@@ -266,12 +268,14 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0" aria-hidden>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=2000&q=80&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?w=2000&q=80&auto=format&fit=crop"
             alt=""
-            className="photo-muted absolute right-0 top-0 h-full w-full object-cover opacity-[0.3] md:w-2/3"
+            className="photo-muted absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background-alt via-background-alt/85 to-background-alt/50" />
+          {/* Horizontal fade: solid background on left (text area) */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background-alt via-background-alt/80 to-background-alt/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background-alt/30 via-transparent to-background-alt/40" />
         </div>
 
         <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20 lg:py-28">
