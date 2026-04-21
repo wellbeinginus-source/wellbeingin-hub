@@ -82,6 +82,41 @@ h1, h2, h3, h4, h5, h6, p, blockquote, li, dt, dd {
   filter: saturate(0.82) contrast(0.98);
 }
 
+/* ── Ken Burns (slow zoom/pan on static background) ─────── */
+@keyframes kenBurnsZoomIn {
+  0%   { transform: scale(1.0) translate3d(0, 0, 0); }
+  100% { transform: scale(1.12) translate3d(-1.5%, -1.2%, 0); }
+}
+@keyframes kenBurnsDrift {
+  0%   { transform: scale(1.08) translate3d(-1%, 0, 0); }
+  100% { transform: scale(1.15) translate3d(1.5%, -1.5%, 0); }
+}
+@keyframes kenBurnsSoft {
+  0%   { transform: scale(1.05) translate3d(0.5%, -0.5%, 0); }
+  100% { transform: scale(1.13) translate3d(-1%, 0.8%, 0); }
+}
+
+.ken-burns {
+  animation: kenBurnsZoomIn 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.ken-burns-drift {
+  animation: kenBurnsDrift 32s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.ken-burns-soft {
+  animation: kenBurnsSoft 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns,
+  .ken-burns-drift,
+  .ken-burns-soft {
+    animation: none;
+  }
+}
+
 .font-serif {
   font-family: var(--font-serif);
   font-weight: 600;

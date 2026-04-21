@@ -85,7 +85,7 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=2400&q=80&auto=format&fit=crop"
             alt=""
-            className="photo-muted absolute inset-0 h-full w-full object-cover"
+            className="photo-muted ken-burns absolute inset-0 h-full w-full object-cover"
             loading="eager"
           />
           {/* Horizontal fade: solid background on left (text area) → reveal image on right */}
@@ -111,10 +111,12 @@ export default function Home() {
             <p className="type-lead text-muted">
               <span className="nowrap">주식회사 웰빙이너스</span>는
               <span className="text-foreground"> AI 기술과 현장의 전문성</span>을 엮어,
+              <br className="hidden sm:block" />
               일상의 판단과 선택을 정돈합니다.
             </p>
             <p className="type-lead mt-4 text-muted">
               상담·창작·헬스케어 — 분야는 다르지만,
+              <br className="hidden sm:block" />
               모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
             </p>
           </div>
@@ -160,8 +162,12 @@ export default function Home() {
               </div>
               <p className="max-w-sm text-[15px] leading-[1.85] text-muted sm:text-right">
                 몸과 마음, 그리고 표현.
-                웰빙이너스의 서비스들은 서로 다른 질문에서 출발하지만,
-                결국 <span className="text-foreground font-medium">한 사람의 하루</span>라는 한 점에서 만납니다.
+                <br />
+                웰빙이너스의 서비스들은
+                서로 다른 질문에서 출발하지만,
+                <br className="hidden sm:block" />
+                결국 <span className="text-foreground font-medium">한 사람의 하루</span>라는
+                한 점에서 만납니다.
               </p>
             </div>
           </Reveal>
@@ -184,7 +190,7 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=2400&q=80&auto=format&fit=crop"
             alt=""
-            className="photo-muted absolute inset-0 h-full w-full object-cover opacity-[0.55]"
+            className="photo-muted ken-burns-drift absolute inset-0 h-full w-full object-cover opacity-[0.55]"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/70" />
@@ -218,6 +224,7 @@ export default function Home() {
                 </h3>
                 <p className="mt-5 text-[15px] leading-[1.9] text-muted">
                   전문가의 시선으로 정리한 영양과 건강.
+                  <br />
                   무엇을, 왜, 얼마나 필요한지를 명확하게.
                 </p>
                 <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
@@ -235,6 +242,7 @@ export default function Home() {
                 </h3>
                 <p className="mt-5 text-[15px] leading-[1.9] text-muted">
                   오늘의 기분, 내일의 방향.
+                  <br />
                   명리학의 오래된 지혜를 AI의 정확성으로 풀어냅니다.
                 </p>
                 <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
@@ -251,6 +259,7 @@ export default function Home() {
                 </h3>
                 <p className="mt-5 text-[15px] leading-[1.9] text-muted">
                   쓰고 싶었지만 시간이 없었던 이야기들.
+                  <br />
                   당신의 목소리를 대신 정리해 드립니다.
                 </p>
                 <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
@@ -273,7 +282,7 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1511497584788-876760111969?w=2000&q=80&auto=format&fit=crop"
             alt=""
-            className="photo-muted absolute inset-0 h-full w-full object-cover"
+            className="photo-muted ken-burns-soft absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
           {/* Horizontal fade: solid background on left (text area) */}
@@ -299,25 +308,34 @@ export default function Home() {
             <Reveal delay={100} className="lg:col-span-7">
               <div className="space-y-8 text-[16px] leading-[2] text-muted sm:text-[17px]">
                 <p>
-                  <span className="nowrap">주식회사 웰빙이너스</span>의 시작은 거창한 기술이 아니라,
+                  <span className="nowrap">주식회사 웰빙이너스</span>의 시작은
+                  거창한 기술이 아니라,
+                  <br className="hidden sm:block" />
                   현장에서 하루에도 수없이 되풀이되는 한 문장이었습니다.
                 </p>
                 <p className="font-serif text-xl italic leading-[1.6] text-foreground sm:text-2xl">
                   &ldquo;어떤 걸 선택해야 할까요?&rdquo;
                 </p>
                 <p>
-                  그 질문 뒤에는 언제나 <span className="text-foreground">몸의 이야기</span>가 있고,
+                  그 질문 뒤에는 언제나
+                  <br className="hidden sm:block" />
+                  <span className="text-foreground">몸의 이야기</span>가 있고,
                   말이 되지 못한 <span className="text-foreground">마음의 이야기</span>가 있고,
+                  <br className="hidden sm:block" />
                   잘 정리되지 못한 <span className="text-foreground">스스로의 표현</span>이 있었습니다.
                 </p>
                 <p>
                   우리는 AI 기술을 빌려 그 이야기들에 형태를 부여합니다.
+                  <br className="hidden sm:block" />
                   오래된 지혜와 데이터, 전문 지식과 알고리즘, 문장의 구조와 감각 —
+                  <br className="hidden sm:block" />
                   서로 다른 언어들을 하나의 도구로 이어내는 일을 합니다.
                 </p>
                 <p>
                   복잡함은 기술에게, 가벼움은 사람에게.
+                  <br />
                   그 단순한 원칙이 웰빙이너스가 만드는 모든 서비스의 출발점이며,
+                  <br className="hidden sm:block" />
                   앞으로도 변하지 않을 방향입니다.
                 </p>
               </div>
@@ -329,6 +347,7 @@ export default function Home() {
                 <p className="eyebrow">Our Principle</p>
                 <blockquote className="mt-6 font-serif text-2xl leading-[1.55] text-foreground sm:text-[1.75rem]">
                   &ldquo;웰빙은 어딘가 멀리 있는 것이 아니라,
+                  <br />
                   우리 안에서 시작됩니다.&rdquo;
                 </blockquote>
               </div>
