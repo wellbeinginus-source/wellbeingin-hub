@@ -146,9 +146,9 @@ export default function Home() {
                 </h2>
               </div>
               <p className="max-w-sm text-[15px] leading-[1.85] text-muted sm:text-right">
-                현재 운영 중인 세 가지 서비스와
-                곧 공개될 웰빙이너스 스토어.
-                각각은 독립적이되, 서로를 보완하도록 설계됩니다.
+                몸과 마음, 그리고 표현.
+                웰빙이너스의 서비스들은 서로 다른 질문에서 출발하지만,
+                결국 <span className="text-foreground font-medium">한 사람의 하루</span>라는 한 점에서 만납니다.
               </p>
             </div>
           </Reveal>
@@ -163,43 +163,162 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── About ──────────────────────────── */}
-      <section id="about" className="border-b border-border">
+      {/* ── Ecosystem / How They Connect ───── */}
+      <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32 lg:py-40">
-          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
-            <Reveal className="lg:col-span-5">
-              <p className="eyebrow">About</p>
-              <h2 className="mt-4 font-serif type-headline text-foreground">
-                기술로 만드는
-                <br />
-                가벼운 일상.
-              </h2>
-              <p className="mt-10 font-serif text-lg italic leading-[1.6] text-brand sm:text-xl">
-                &ldquo;웰빙은 어딘가 멀리 있는 것이 아니라,
-                <br />
-                우리 안에서 시작됩니다.&rdquo;
-              </p>
-            </Reveal>
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <p className="eyebrow">The Framework</p>
+            <h2 className="mt-4 font-serif type-headline text-foreground">
+              하나의 하루를,
+              <br />
+              세 가지 차원으로.
+            </h2>
+            <p className="mx-auto mt-8 max-w-xl type-lead text-muted">
+              서로 달라 보이는 네 개의 서비스는,
+              결국 한 사람의 하루를 구성하는 세 축을 따라 자리잡습니다.
+            </p>
+          </Reveal>
 
-            <Reveal delay={150} className="lg:col-span-7">
-              <div className="space-y-7 text-[16px] leading-[1.95] text-muted sm:text-[17px]">
+          <Reveal delay={150}>
+            <div className="mt-20 grid grid-cols-1 gap-10 sm:mt-24 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-border-strong">
+              <div className="px-0 sm:px-8 lg:px-12">
+                <p className="font-serif text-4xl italic text-brand sm:text-5xl">
+                  I.
+                </p>
+                <h3 className="mt-6 font-serif text-2xl text-foreground sm:text-[1.75rem]">
+                  몸 <span className="text-subtle font-sans text-sm tracking-[0.22em] uppercase">Body</span>
+                </h3>
+                <p className="mt-5 text-[15px] leading-[1.9] text-muted">
+                  약사의 시선으로 정리한 영양과 건강.
+                  무엇을, 왜, 얼마나 먹어야 하는지를 명확하게.
+                </p>
+                <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
+                  <p>— HArutine</p>
+                  <p>— 웰빙이너스 스토어</p>
+                </div>
+              </div>
+
+              <div className="px-0 sm:px-8 lg:px-12">
+                <p className="font-serif text-4xl italic text-brand sm:text-5xl">
+                  II.
+                </p>
+                <h3 className="mt-6 font-serif text-2xl text-foreground sm:text-[1.75rem]">
+                  마음 <span className="text-subtle font-sans text-sm tracking-[0.22em] uppercase">Mind</span>
+                </h3>
+                <p className="mt-5 text-[15px] leading-[1.9] text-muted">
+                  오늘의 기분, 내일의 방향.
+                  명리학의 오래된 지혜를 AI의 정확성으로 풀어냅니다.
+                </p>
+                <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
+                  <p>— 운세한입</p>
+                </div>
+              </div>
+
+              <div className="px-0 sm:px-8 lg:px-12">
+                <p className="font-serif text-4xl italic text-brand sm:text-5xl">
+                  III.
+                </p>
+                <h3 className="mt-6 font-serif text-2xl text-foreground sm:text-[1.75rem]">
+                  표현 <span className="text-subtle font-sans text-sm tracking-[0.22em] uppercase">Voice</span>
+                </h3>
+                <p className="mt-5 text-[15px] leading-[1.9] text-muted">
+                  쓰고 싶었지만 시간이 없었던 이야기들.
+                  당신의 목소리를 대신 정리해 드립니다.
+                </p>
+                <div className="mt-7 space-y-1.5 text-[13px] tracking-wide text-foreground-soft">
+                  <p>— AI 블로그 작성기</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── About ──────────────────────────── */}
+      <section id="about" className="border-b border-border bg-background-alt">
+        <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32 lg:py-44">
+          {/* Header */}
+          <Reveal>
+            <div className="mb-16 sm:mb-24">
+              <p className="eyebrow">About · Company</p>
+              <h2 className="mt-5 font-serif type-headline text-foreground">
+                우리는,
+                <br />
+                약국 뒤편의 대화에서 시작되었습니다.
+              </h2>
+            </div>
+          </Reveal>
+
+          {/* Body: two-column editorial */}
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
+            <Reveal delay={100} className="lg:col-span-7">
+              <div className="space-y-8 text-[16px] leading-[2] text-muted sm:text-[17px]">
                 <p>
-                  <span className="nowrap">주식회사 웰빙이너스</span>는 AI 기술을 일상의 문제 해결에 접목하는 회사입니다.
-                  복잡한 계산과 반복되는 작업은 AI에게, 판단과 감성은 사람에게.
-                  이 단순한 원칙이 우리가 만드는 모든 서비스의 출발점입니다.
+                  <span className="nowrap">주식회사 웰빙이너스</span>의 시작은 거창한 기술이 아니라,
+                  약국에서 하루에도 수십 번씩 되풀이되는 한 문장이었습니다.
+                </p>
+                <p className="font-serif text-xl italic leading-[1.6] text-foreground sm:text-2xl">
+                  &ldquo;어떤 걸 먹어야 할까요?&rdquo;
                 </p>
                 <p>
-                  운세 상담, 블로그 글쓰기, 영양제 큐레이션, 그리고 약사가 직접 선별한 건강기능식품까지.
-                  서로 다른 영역이지만 모두
-                  &ldquo;<span className="text-foreground font-medium">더 나은 하루</span>&rdquo;
-                  라는 한 가지 방향을 공유합니다.
+                  그 질문 뒤에는 언제나 <span className="text-foreground">몸의 이야기</span>가 있고,
+                  말이 되지 못한 <span className="text-foreground">마음의 이야기</span>가 있고,
+                  잘 정리되지 못한 <span className="text-foreground">스스로의 표현</span>이 있었습니다.
                 </p>
                 <p>
-                  각 서비스는 독립적으로 기능하되,
-                  결국 한 사람의 하루를 더 가볍게 만드는 데 기여합니다.
-                  우리는 그 믿음을 따라 오늘도 작지만 단단한 도구들을 만들어 갑니다.
+                  우리는 AI 기술을 빌려 그 이야기들에 형태를 부여합니다.
+                  명리학과 데이터, 약학과 알고리즘, 문장의 구조와 감각 —
+                  서로 다른 언어들을 하나의 도구로 이어내는 일을 합니다.
+                </p>
+                <p>
+                  복잡함은 기술에게, 가벼움은 사람에게.
+                  그 단순한 원칙이 웰빙이너스가 만드는 모든 서비스의 출발점이며,
+                  앞으로도 변하지 않을 방향입니다.
                 </p>
               </div>
+            </Reveal>
+
+            {/* Side panel */}
+            <Reveal delay={200} className="lg:col-span-5">
+              <div className="border-t border-border-strong pt-10">
+                <p className="eyebrow">Our Principle</p>
+                <blockquote className="mt-6 font-serif text-2xl leading-[1.55] text-foreground sm:text-[1.75rem]">
+                  &ldquo;웰빙은 어딘가 멀리 있는 것이 아니라,
+                  우리 안에서 시작됩니다.&rdquo;
+                </blockquote>
+              </div>
+
+              <dl className="mt-14 space-y-10 sm:mt-16">
+                <div>
+                  <dt className="eyebrow">Founder</dt>
+                  <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
+                    하윤지
+                  </dd>
+                  <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
+                    약사 · 대표이사
+                  </dd>
+                </div>
+                <div>
+                  <dt className="eyebrow">Headquarters</dt>
+                  <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
+                    Wonju, Korea
+                  </dd>
+                  <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
+                    강원특별자치도 원주시
+                  </dd>
+                </div>
+                <div>
+                  <dt className="eyebrow">Focus</dt>
+                  <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
+                    AI · Pharmacy · Daily Life
+                  </dd>
+                  <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
+                    약사의 전문성과 AI 기술을
+                    <br />
+                    일상의 도구로 엮어내는 일
+                  </dd>
+                </div>
+              </dl>
             </Reveal>
           </div>
         </div>
