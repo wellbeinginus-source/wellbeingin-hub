@@ -61,6 +61,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "ss01", "ss02", "kern";
   text-rendering: optimizeLegibility;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, li, dt, dd {
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* Subtle paper-like grain texture */

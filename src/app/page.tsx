@@ -111,10 +111,9 @@ export default function Home() {
           </div>
 
           <h1 className="font-serif type-display text-foreground reveal-up delay-100">
-            웰빙은,
+            웰빙은, 우리 안에서
             <br />
-            우리 안에서
-            <span className="inline-block text-brand"> 시작</span>됩니다.
+            <span className="text-brand">시작</span>됩니다.
           </h1>
 
           <p className="mt-7 font-serif-light text-xl italic text-muted sm:mt-8 sm:text-2xl lg:text-[1.75rem] reveal-up delay-200">
@@ -132,9 +131,12 @@ export default function Home() {
             </div>
             <div className="border-l-2 border-brand pl-6 type-lead text-muted lg:col-span-7">
               <p>
-                주식회사 웰빙이너스는 <span className="text-foreground">AI 기술과 약사의 전문성</span>을
-                결합해, 일상의 판단과 선택을 정돈합니다. 상담·창작·헬스케어 —
-                분야는 다르지만, 모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
+                주식회사 웰빙이너스는 <span className="text-foreground">AI 기술과 약사의 전문성</span>을 결합해,
+                일상의 판단과 선택을 정돈합니다.
+              </p>
+              <p className="mt-5">
+                상담·창작·헬스케어 — 분야는 다르지만,
+                모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
               </p>
             </div>
           </div>
@@ -197,16 +199,20 @@ export default function Home() {
               </div>
               <h2 className="font-serif type-headline text-foreground">
                 일상과 업무를,
-                <br className="sm:hidden" />
-                <span className="sm:ml-3">더 정돈되게.</span>
+                <br />
+                더 정돈되게.
               </h2>
             </div>
-            <p className="max-w-sm text-[15px] leading-[1.8] text-muted sm:text-right">
-              현재 운영 중인 세 가지 서비스와
-              <br />
-              곧 공개될 웰빙이너스 스토어. <br />
-              각각은 독립적이되, 서로를 보완하도록 설계됩니다.
-            </p>
+            <div className="max-w-sm space-y-4 text-[15px] leading-[1.85] text-muted sm:text-right">
+              <p>
+                현재 운영 중인 세 가지 서비스와
+                곧 공개될 웰빙이너스 스토어.
+              </p>
+              <p>
+                각각은 독립적이되,
+                서로를 보완하도록 설계됩니다.
+              </p>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 border-t border-l border-border bg-surface sm:grid-cols-2">
@@ -221,16 +227,21 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border bg-brand-wash">
         <div className="mx-auto max-w-5xl px-5 py-24 text-center sm:px-8 sm:py-32 lg:py-40">
           <p className="eyebrow mb-8 text-brand">Our Promise</p>
-          <blockquote className="font-serif text-3xl leading-[1.35] text-foreground sm:text-4xl lg:text-5xl">
+          <blockquote className="font-serif text-3xl leading-[1.4] text-foreground sm:text-4xl lg:text-5xl">
             &ldquo;<span className="text-brand">작지만 단단한 도구</span>가
-            <br className="hidden sm:block" />
+            <br />
             매일의 무게를 가볍게 만듭니다.&rdquo;
           </blockquote>
-          <p className="mx-auto mt-10 max-w-2xl text-[15px] leading-[1.9] text-muted sm:text-base">
-            우리는 화려한 혁신보다, 매일 쓰이는 정직한 도구를 만들고 싶습니다.
-            <br className="hidden sm:block" />
-            AI와 약사의 전문성을 매개로, 한 사람의 하루에 조용히 스며듭니다.
-          </p>
+          <div className="mx-auto mt-12 max-w-2xl space-y-4 text-[15px] leading-[1.95] text-muted sm:text-base">
+            <p>
+              우리는 화려한 혁신보다,
+              매일 쓰이는 정직한 도구를 만들고 싶습니다.
+            </p>
+            <p>
+              AI와 약사의 전문성을 매개로,
+              한 사람의 하루에 조용히 스며듭니다.
+            </p>
+          </div>
 
           {/* Decorative circle element */}
           <div
@@ -295,20 +306,22 @@ export default function Home() {
 
             <div className="space-y-8 text-[16px] leading-[1.95] text-muted lg:col-span-7 sm:text-[17px]">
               <p className="drop-cap">
-                주식회사 웰빙이너스는 AI 기술을 일상의 문제 해결에 접목하는
-                회사입니다. 복잡한 계산과 반복되는 작업은 AI에게, 판단과 감성은
-                사람에게. 이 단순한 원칙이 우리가 만드는 모든 서비스의 출발점입니다.
+                주식회사 웰빙이너스는 AI 기술을 일상의 문제 해결에 접목하는 회사입니다.
+                복잡한 계산과 반복되는 작업은 AI에게, 판단과 감성은 사람에게.
+                이 단순한 원칙이 우리가 만드는 모든 서비스의 출발점입니다.
               </p>
               <p>
-                운세 상담, 블로그 글쓰기, 영양제 큐레이션, 그리고 약사가 직접
-                선별한 건강기능식품까지 — 서로 다른 영역이지만 모두
+                운세 상담, 블로그 글쓰기, 영양제 큐레이션,
+                그리고 약사가 직접 선별한 건강기능식품까지.
+                서로 다른 영역이지만 모두
                 &ldquo;<span className="text-foreground font-medium">더 나은 하루</span>&rdquo;
                 라는 한 가지 방향을 공유합니다.
               </p>
               <p>
-                각 서비스는 독립적으로 기능하되, 결국 한 사람의 하루를 더 가볍게
-                만드는 데 기여합니다. 우리는 그 믿음을 따라 오늘도 작지만 단단한
-                도구들을, 그리고 검증된 제품들을 만들어 갑니다.
+                각 서비스는 독립적으로 기능하되,
+                결국 한 사람의 하루를 더 가볍게 만드는 데 기여합니다.
+                우리는 그 믿음을 따라 오늘도 작지만 단단한 도구들을,
+                그리고 검증된 제품들을 만들어 갑니다.
               </p>
             </div>
           </div>
