@@ -11,24 +11,6 @@ type Service = {
 
 const SERVICES: Service[] = [
   {
-    name: "운세한입",
-    tagline: "AI 사주 · 운세 · 궁합",
-    description:
-      "사주·대운·궁합·혈액형·연간운세까지, 방대한 명리 데이터를 AI가 풀어내 오늘의 이야기를 건넵니다.",
-    url: "https://unsehanip.vercel.app",
-    status: "live",
-    category: "라이프스타일",
-  },
-  {
-    name: "AI 블로그 작성기",
-    tagline: "전문가 수준의 콘텐츠 자동화",
-    description:
-      "주제만 입력하면 SEO 최적화된 블로그 글을 구성·작성·다듬어 완성해 드립니다.",
-    url: "https://ai-blog-writer-eosin.vercel.app",
-    status: "live",
-    category: "생산성",
-  },
-  {
     name: "HArutine",
     tagline: "AI 약사의 영양제 큐레이션",
     description:
@@ -45,6 +27,24 @@ const SERVICES: Service[] = [
     url: null,
     status: "soon",
     category: "커머스",
+  },
+  {
+    name: "운세한입",
+    tagline: "AI 사주 · 운세 · 궁합",
+    description:
+      "사주·대운·궁합·혈액형·연간운세까지, 방대한 명리 데이터를 AI가 풀어내 오늘의 이야기를 건넵니다.",
+    url: "https://unsehanip.vercel.app",
+    status: "live",
+    category: "라이프스타일",
+  },
+  {
+    name: "AI 블로그 작성기",
+    tagline: "전문가 수준의 콘텐츠 자동화",
+    description:
+      "주제만 입력하면 SEO 최적화된 블로그 글을 구성·작성·다듬어 완성해 드립니다.",
+    url: "https://ai-blog-writer-eosin.vercel.app",
+    status: "live",
+    category: "생산성",
   },
 ];
 
