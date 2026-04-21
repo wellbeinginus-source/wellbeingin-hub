@@ -199,8 +199,8 @@ export default function Home() {
               세 가지 차원으로.
             </h2>
             <p className="mx-auto mt-6 max-w-xl type-lead text-muted">
-              서로 달라 보이는 네 개의 서비스는,
-              결국 한 사람의 하루를 구성하는 세 축을 따라 자리잡습니다.
+              결국 우리가 만드는 모든 것은,
+              한 사람의 하루를 구성하는 세 축 위에 놓입니다.
             </p>
           </Reveal>
 
