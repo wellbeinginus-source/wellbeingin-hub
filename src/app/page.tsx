@@ -200,7 +200,10 @@ export default function Home() {
             </h2>
             <p className="mx-auto mt-6 max-w-xl type-lead text-muted">
               결국 우리가 만드는 모든 것은,
-              한 사람의 하루를 구성하는 세 축 위에 놓입니다.
+              <br className="hidden sm:block" />
+              한 사람의 하루를 구성하는
+              <br className="sm:hidden" />
+              {" "}세 축 위에 놓입니다.
             </p>
           </Reveal>
 
