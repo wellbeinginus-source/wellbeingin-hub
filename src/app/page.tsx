@@ -14,7 +14,7 @@ const SERVICES: Service[] = [
     name: "운세한입",
     tagline: "AI 사주 · 운세 · 궁합",
     description:
-      "사주·대운·궁합·혈액형·연간운세까지, 방대한 명리 데이터를 AI가 풀어냅니다.",
+      "사주·대운·궁합·혈액형·연간운세까지, 방대한 명리 데이터를 AI가 풀어내 오늘의 이야기를 건넵니다.",
     url: "https://unsehanip.vercel.app",
     status: "live",
     category: "라이프스타일",
@@ -29,19 +29,10 @@ const SERVICES: Service[] = [
     category: "생산성",
   },
   {
-    name: "노무사 계산기",
-    tagline: "퇴직금 · 연차 · 4대보험",
-    description:
-      "정식 산식 기반 퇴직금·실수령액·연차·4대보험·주휴수당·연장야간휴일 6종 계산.",
-    url: "https://labor-calc.vercel.app",
-    status: "live",
-    category: "업무 도구",
-  },
-  {
     name: "HArutine",
     tagline: "AI 약사의 영양제 큐레이션",
     description:
-      "증상·목적·복용 이력을 분석해 나에게 꼭 맞는 영양제를 약사의 시선으로 추천합니다.",
+      "증상·목적·복용 이력을 분석해 나에게 꼭 맞는 영양제를, 약사의 시선으로 추천합니다.",
     url: "https://harutine.net/",
     status: "live",
     category: "헬스케어",
@@ -50,28 +41,10 @@ const SERVICES: Service[] = [
     name: "웰빙이너스 스토어",
     tagline: "약사가 고른 건강기능식품",
     description:
-      "HArutine의 데이터와 약사의 전문성을 바탕으로 큐레이션한 건강기능식품을 만나보세요.",
+      "HArutine의 데이터와 약사의 전문성을 바탕으로, 오늘부터 내일까지 필요한 건강기능식품을 엄선해 전합니다.",
     url: null,
     status: "soon",
     category: "커머스",
-  },
-  {
-    name: "상권분석",
-    tagline: "데이터 기반 상권 리포트",
-    description:
-      "행정동 단위 유동인구·업종 분포·배달 비중까지, AI가 정리한 상권 인사이트.",
-    url: null,
-    status: "soon",
-    category: "비즈니스",
-  },
-  {
-    name: "TradeUp",
-    tagline: "부동산 교환 매칭 플랫폼",
-    description:
-      "1:1 교환에서 삼각 교환까지, 더 원하는 부동산으로 이동하는 새로운 방법.",
-    url: null,
-    status: "soon",
-    category: "부동산",
   },
 ];
 
@@ -79,18 +52,24 @@ const PILLARS = [
   {
     kicker: "AI",
     title: "기술",
-    body: "복잡한 계산과 반복 작업을 AI에게 맡기고, 사람은 더 중요한 일에 집중합니다.",
+    body: "복잡한 계산과 반복되는 작업은 AI에게 맡기고, 사람은 더 중요한 일에 집중합니다.",
   },
   {
     kicker: "Pharmacist",
     title: "전문성",
-    body: "약사의 시선에서 검증한 정보와 제품만을, 책임지고 전달합니다.",
+    body: "약사의 시선에서 검증한 정보와 제품만을, 책임지는 언어로 전달합니다.",
   },
   {
     kicker: "Daily",
     title: "일상",
-    body: "매일의 루틴에 자연스럽게 녹아드는 가벼움이, 진짜 웰빙의 시작입니다.",
+    body: "매일의 루틴에 자연스럽게 스며드는 가벼움 — 그것이 진짜 웰빙의 시작입니다.",
   },
+];
+
+const STATS = [
+  { value: "04", label: "Services Live", sub: "운영 중인 서비스" },
+  { value: "2025", label: "Established", sub: "설립 연도" },
+  { value: "01", label: "Mission", sub: "우리 안에서 시작되는 웰빙" },
 ];
 
 export default function Home() {
@@ -126,26 +105,22 @@ export default function Home() {
       {/* ── Hero ──────────────────────────── */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="mx-auto max-w-7xl px-5 pt-16 pb-20 sm:px-8 sm:pt-28 sm:pb-32 lg:pt-36 lg:pb-40">
-          {/* Top meta row */}
           <div className="mb-12 flex items-center gap-4 reveal-in">
-            <span className="draw-line h-px w-12 bg-border-strong sm:w-16" />
+            <span className="draw-line h-px w-12 bg-brand sm:w-16" />
             <p className="eyebrow">Established 2025 · Seoul & Wonju</p>
           </div>
 
-          {/* Headline */}
           <h1 className="font-serif type-display text-foreground reveal-up delay-100">
             웰빙은,
             <br />
             우리 안에서
-            <span className="inline-block text-gold"> 시작</span>됩니다.
+            <span className="inline-block text-brand"> 시작</span>됩니다.
           </h1>
 
-          {/* English subhead in italic serif */}
           <p className="mt-7 font-serif-light text-xl italic text-muted sm:mt-8 sm:text-2xl lg:text-[1.75rem] reveal-up delay-200">
             Wellness, built into your day.
           </p>
 
-          {/* Body paragraph — editorial feel */}
           <div className="mt-12 grid grid-cols-1 gap-8 sm:mt-16 lg:grid-cols-12 lg:gap-16 reveal-up delay-300">
             <div className="lg:col-span-5">
               <p className="eyebrow mb-4">Manifesto — 2025</p>
@@ -155,16 +130,15 @@ export default function Home() {
                 가벼움은 당신에게.
               </p>
             </div>
-            <div className="border-l-2 border-border-strong pl-6 type-lead text-muted lg:col-span-7">
+            <div className="border-l-2 border-brand pl-6 type-lead text-muted lg:col-span-7">
               <p>
                 주식회사 웰빙이너스는 <span className="text-foreground">AI 기술과 약사의 전문성</span>을
-                결합해, 일상의 판단과 선택을 정돈합니다. 계산·상담·창작·헬스케어 —
+                결합해, 일상의 판단과 선택을 정돈합니다. 상담·창작·헬스케어 —
                 분야는 다르지만, 모든 제품은 &ldquo;더 가벼운 하루&rdquo; 라는 한 방향을 향합니다.
               </p>
             </div>
           </div>
 
-          {/* CTA */}
           <div className="mt-14 flex flex-wrap items-center gap-3 reveal-up delay-400 sm:mt-16">
             <a
               href="#services"
@@ -182,16 +156,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Large decorative numeral */}
+        {/* Decorative numeral */}
         <div
           aria-hidden
-          className="pointer-events-none absolute -bottom-8 -right-8 select-none font-serif text-[14rem] leading-none text-border sm:-bottom-16 sm:-right-10 sm:text-[20rem] lg:text-[26rem]"
+          className="pointer-events-none absolute -bottom-6 -right-8 select-none font-serif text-[12rem] leading-none text-border sm:-bottom-12 sm:-right-10 sm:text-[18rem] lg:text-[24rem]"
         >
           2025
         </div>
       </section>
 
-      {/* ── Pillars (3-column editorial) ───── */}
+      {/* ── Pillars ────────────────────────── */}
       <section className="border-b border-border bg-background-alt">
         <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-border px-5 sm:px-8 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
           {PILLARS.map((p, i) => (
@@ -200,7 +174,7 @@ export default function Home() {
                 <span className="section-number text-sm">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="eyebrow">{p.kicker}</p>
+                <p className="eyebrow text-brand">{p.kicker}</p>
               </div>
               <h3 className="font-serif text-3xl text-foreground sm:text-4xl">
                 {p.title}
@@ -218,7 +192,7 @@ export default function Home() {
             <div className="max-w-2xl">
               <div className="mb-6 flex items-center gap-4">
                 <span className="section-number text-sm">01</span>
-                <span className="h-px w-12 bg-border-strong" />
+                <span className="h-px w-12 bg-brand" />
                 <p className="eyebrow">Our Services</p>
               </div>
               <h2 className="font-serif type-headline text-foreground">
@@ -228,14 +202,68 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-sm text-[15px] leading-[1.8] text-muted sm:text-right">
-              현재 운영 중인 네 가지 서비스와 곧 공개될 세 가지 프로젝트.
+              현재 운영 중인 세 가지 서비스와
+              <br />
+              곧 공개될 웰빙이너스 스토어. <br />
               각각은 독립적이되, 서로를 보완하도록 설계됩니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 border-t border-l border-border bg-surface sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 border-t border-l border-border bg-surface sm:grid-cols-2">
             {SERVICES.map((service, idx) => (
               <ServiceCard key={service.name} service={service} index={idx} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Manifesto / Quote ──────────────── */}
+      <section className="relative overflow-hidden border-b border-border bg-brand-wash">
+        <div className="mx-auto max-w-5xl px-5 py-24 text-center sm:px-8 sm:py-32 lg:py-40">
+          <p className="eyebrow mb-8 text-brand">Our Promise</p>
+          <blockquote className="font-serif text-3xl leading-[1.35] text-foreground sm:text-4xl lg:text-5xl">
+            &ldquo;<span className="text-brand">작지만 단단한 도구</span>가
+            <br className="hidden sm:block" />
+            매일의 무게를 가볍게 만듭니다.&rdquo;
+          </blockquote>
+          <p className="mx-auto mt-10 max-w-2xl text-[15px] leading-[1.9] text-muted sm:text-base">
+            우리는 화려한 혁신보다, 매일 쓰이는 정직한 도구를 만들고 싶습니다.
+            <br className="hidden sm:block" />
+            AI와 약사의 전문성을 매개로, 한 사람의 하루에 조용히 스며듭니다.
+          </p>
+
+          {/* Decorative circle element */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full border border-brand/15 sm:h-96 sm:w-96"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -bottom-32 -right-24 h-72 w-72 rounded-full border border-brand/10 sm:h-[28rem] sm:w-[28rem]"
+          />
+        </div>
+      </section>
+
+      {/* ── By the Numbers ─────────────────── */}
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
+          <div className="mb-14 flex items-center gap-4 sm:mb-16">
+            <span className="section-number text-sm">02</span>
+            <span className="h-px w-12 bg-brand" />
+            <p className="eyebrow">By the Numbers</p>
+          </div>
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-10">
+            {STATS.map((stat, i) => (
+              <div key={stat.label} className="group relative">
+                <p className="font-serif type-stat text-brand">{stat.value}</p>
+                <div className="mt-4 h-px w-12 bg-brand transition-all duration-500 group-hover:w-24" />
+                <p className="mt-4 text-[11px] font-semibold tracking-[0.22em] text-foreground uppercase">
+                  {stat.label}
+                </p>
+                <p className="mt-2 text-[14px] leading-relaxed text-muted">
+                  {stat.sub}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -247,8 +275,8 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-5">
               <div className="mb-6 flex items-center gap-4">
-                <span className="section-number text-sm">02</span>
-                <span className="h-px w-12 bg-border-strong" />
+                <span className="section-number text-sm">03</span>
+                <span className="h-px w-12 bg-brand" />
                 <p className="eyebrow">Philosophy</p>
               </div>
               <h2 className="font-serif type-headline text-foreground">
@@ -256,7 +284,7 @@ export default function Home() {
                 <br />
                 가벼운 일상.
               </h2>
-              <div className="mt-12 inline-block border-l-2 border-foreground pl-5">
+              <div className="mt-12 inline-block border-l-2 border-brand pl-5">
                 <p className="font-serif text-lg italic leading-[1.65] text-foreground-soft sm:text-xl">
                   웰빙은 어딘가 멀리 있는 것이 아니라,
                   <br />
@@ -272,15 +300,15 @@ export default function Home() {
                 사람에게. 이 단순한 원칙이 우리가 만드는 모든 서비스의 출발점입니다.
               </p>
               <p>
-                운세 상담, 블로그 글쓰기, 세무·노무 계산, 영양제 큐레이션, 그리고
-                약사가 직접 선별한 건강기능식품까지 — 서로 다른 영역이지만 모두
+                운세 상담, 블로그 글쓰기, 영양제 큐레이션, 그리고 약사가 직접
+                선별한 건강기능식품까지 — 서로 다른 영역이지만 모두
                 &ldquo;<span className="text-foreground font-medium">더 나은 하루</span>&rdquo;
                 라는 한 가지 방향을 공유합니다.
               </p>
               <p>
                 각 서비스는 독립적으로 기능하되, 결국 한 사람의 하루를 더 가볍게
-                만드는 데 기여합니다. 우리는 그 믿음을 따라 오늘도 작지만
-                단단한 도구들을, 그리고 검증된 제품들을 만들어 갑니다.
+                만드는 데 기여합니다. 우리는 그 믿음을 따라 오늘도 작지만 단단한
+                도구들을, 그리고 검증된 제품들을 만들어 갑니다.
               </p>
             </div>
           </div>
@@ -291,13 +319,12 @@ export default function Home() {
       <footer id="contact" className="bg-dark-bg text-dark-fg">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:py-36">
           <div className="mb-14 flex items-center gap-4 sm:mb-20">
-            <span className="section-number text-sm text-dark-muted">03</span>
+            <span className="section-number text-sm text-dark-muted">04</span>
             <span className="h-px w-12 bg-dark-border" />
             <p className="eyebrow text-dark-muted">Contact</p>
           </div>
 
           <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
-            {/* Left: brand */}
             <div className="lg:col-span-5">
               <h3 className="font-serif text-3xl leading-[1.2] text-dark-fg sm:text-4xl lg:text-5xl">
                 주식회사
@@ -321,7 +348,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: corporate info */}
             <div className="lg:col-span-7">
               <p className="text-[10px] font-semibold tracking-[0.22em] text-dark-muted uppercase">
                 Corporate Information
@@ -373,16 +399,16 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
 
   const content = (
     <article
-      className={`group relative flex h-full flex-col border-r border-b border-border bg-surface p-7 transition-all duration-500 sm:p-8 lg:p-10 ${
-        isLive ? "hover:bg-background-alt" : "opacity-70"
+      className={`group relative flex h-full flex-col border-r border-b border-border bg-surface p-7 transition-all duration-500 sm:p-10 lg:p-12 ${
+        isLive ? "hover:bg-brand-wash" : "opacity-80"
       }`}
     >
-      <div className="mb-8 flex items-start justify-between gap-3">
+      <div className="mb-10 flex items-start justify-between gap-3">
         <span className="section-number text-sm">{number}</span>
         <span
           className={`shrink-0 px-2.5 py-1 text-[10px] font-medium tracking-[0.15em] uppercase ${
             isLive
-              ? "bg-foreground text-background"
+              ? "bg-brand text-background"
               : "border border-border-strong text-subtle"
           }`}
         >
@@ -391,7 +417,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       </div>
 
       <p className="eyebrow mb-3">{service.category}</p>
-      <h3 className="font-serif text-2xl leading-tight text-foreground sm:text-[1.6rem]">
+      <h3 className="font-serif text-2xl leading-tight text-foreground sm:text-[1.75rem]">
         {service.name}
       </h3>
       <p className="mt-3 text-[15px] font-medium text-foreground-soft">
@@ -402,10 +428,10 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       </p>
 
       {isLive && (
-        <div className="mt-10 flex items-center gap-3 text-[13px] font-medium text-foreground">
+        <div className="mt-10 flex items-center gap-3 text-[13px] font-medium text-brand">
           <span className="tracking-[0.18em] uppercase">Visit</span>
           <span className="relative h-px w-8 overflow-hidden bg-border-strong">
-            <span className="absolute inset-0 origin-left scale-x-0 bg-foreground transition-transform duration-500 group-hover:scale-x-100" />
+            <span className="absolute inset-0 origin-left scale-x-0 bg-brand transition-transform duration-500 group-hover:scale-x-100" />
           </span>
           <span className="transition-transform duration-500 group-hover:translate-x-1">
             →
