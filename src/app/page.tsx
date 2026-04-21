@@ -58,8 +58,13 @@ export default function Home() {
       {/* ── Header ─────────────────────────── */}
       <header className="sticky top-0 z-40 border-b border-border bg-background/92 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
-          <Link href="/" className="font-serif text-lg tracking-tight text-foreground">
-            웰빙이너스
+          <Link href="/" className="flex items-baseline gap-2.5 text-foreground">
+            <span className="font-serif text-[1.35rem] tracking-[-0.01em] sm:text-[1.5rem]">
+              Wellbeingin<span className="text-brand">.</span>
+            </span>
+            <span className="hidden text-[9.5px] font-medium tracking-[0.3em] text-subtle sm:inline">
+              US
+            </span>
           </Link>
           <nav className="flex items-center gap-7 text-[13px] font-medium text-muted sm:gap-9 sm:text-sm">
             <a href="#services" className="link-underline hover:text-foreground transition-colors">
@@ -78,11 +83,7 @@ export default function Home() {
       {/* ── Hero ──────────────────────────── */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 pt-24 pb-24 sm:px-8 sm:pt-36 sm:pb-36 lg:pt-44 lg:pb-44">
-          <p className="eyebrow enter">
-            <span className="nowrap">Established 2025</span>
-            <span className="mx-1.5">·</span>
-            <span className="nowrap">Seoul & Wonju</span>
-          </p>
+          <p className="eyebrow enter">Established 2025</p>
 
           <h1 className="mt-10 font-serif type-display text-foreground enter delay-100">
             웰빙은, 우리 안에서
@@ -299,15 +300,6 @@ export default function Home() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="eyebrow">Headquarters</dt>
-                  <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
-                    Wonju, Korea
-                  </dd>
-                  <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
-                    강원특별자치도 원주시
-                  </dd>
-                </div>
-                <div>
                   <dt className="eyebrow">Focus</dt>
                   <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
                     Care × Technology
@@ -316,6 +308,17 @@ export default function Home() {
                     현장의 전문성과 AI 기술을
                     <br />
                     일상의 도구로 엮어내는 일
+                  </dd>
+                </div>
+                <div>
+                  <dt className="eyebrow">Practice</dt>
+                  <dd className="mt-3 font-serif text-xl text-foreground sm:text-2xl">
+                    Small, Solid Tools
+                  </dd>
+                  <dd className="mt-2 text-[14px] leading-[1.8] text-muted">
+                    화려함보다 단단함을,
+                    <br />
+                    새로움보다 쓸모를 먼저
                   </dd>
                 </div>
               </dl>
