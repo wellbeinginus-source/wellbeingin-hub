@@ -78,7 +78,11 @@ export default function Home() {
       {/* ── Hero ──────────────────────────── */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 pt-24 pb-24 sm:px-8 sm:pt-36 sm:pb-36 lg:pt-44 lg:pb-44">
-          <p className="eyebrow enter">Established 2025 · Seoul & Wonju</p>
+          <p className="eyebrow enter">
+            <span className="nowrap">Established 2025</span>
+            <span className="mx-1.5">·</span>
+            <span className="nowrap">Seoul & Wonju</span>
+          </p>
 
           <h1 className="mt-10 font-serif type-display text-foreground enter delay-100">
             웰빙은, 우리 안에서
@@ -92,7 +96,7 @@ export default function Home() {
 
           <div className="mt-16 max-w-2xl enter delay-300">
             <p className="type-lead text-muted">
-              주식회사 웰빙이너스는
+              <span className="nowrap">주식회사 웰빙이너스</span>는
               <span className="text-foreground"> AI 기술과 약사의 전문성</span>을 결합해,
               일상의 판단과 선택을 정돈합니다.
             </p>
@@ -180,7 +184,7 @@ export default function Home() {
             <Reveal delay={150} className="lg:col-span-7">
               <div className="space-y-7 text-[16px] leading-[1.95] text-muted sm:text-[17px]">
                 <p>
-                  주식회사 웰빙이너스는 AI 기술을 일상의 문제 해결에 접목하는 회사입니다.
+                  <span className="nowrap">주식회사 웰빙이너스</span>는 AI 기술을 일상의 문제 해결에 접목하는 회사입니다.
                   복잡한 계산과 반복되는 작업은 AI에게, 판단과 감성은 사람에게.
                   이 단순한 원칙이 우리가 만드는 모든 서비스의 출발점입니다.
                 </p>
@@ -255,10 +259,13 @@ export default function Home() {
               <p className="tracking-[0.22em]">WELLBEINGIN.US</p>
             </div>
             <p className="mt-4 text-[11px] leading-[1.8] text-dark-muted/80">
-              주식회사 웰빙이너스 &middot; 대표 하윤지 &middot; 사업자등록번호 570-86-03233
-              <br className="sm:hidden" />
-              <span className="hidden sm:inline"> &middot; </span>
-              강원특별자치도 원주시 오성마을길 63-25, 201-p378
+              <span className="nowrap">주식회사 웰빙이너스</span>
+              <span className="mx-2 text-dark-muted/50">·</span>
+              <span className="nowrap">대표 하윤지</span>
+              <span className="mx-2 text-dark-muted/50">·</span>
+              <span className="nowrap">사업자등록번호 570-86-03233</span>
+              <br />
+              <span className="nowrap">강원특별자치도 원주시 오성마을길 63-25, 201-p378</span>
             </p>
           </div>
         </div>
